@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="utf-8">
+      <!-- css link -->
+      <link href="css/style.css" rel="stylesheet" type="text/css">
+
+      <!-- font link -->
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+
+      <!-- Js Script -->
+      <script type="text/javascript" src="js/sorttable.js"></script>
+      <!--dependencies for table pagination-->
+      <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="js/tablepagination.js"></script>
+    <!--script for table pagination-->
+      <script type="text/javaScript"> 
+      $(function() {
+        $('table').tablePagination({});
+      });
+    </script>
+
+      <title>Concepcion Midea: Sell Out Tracker</title>
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+      <%= csrf_meta_tags %>
+  </head>
+  <nav class="navbar">
+          <ul style="margin: 0 auto">
+            <div class="test">
+              <li><a class="navtitle" href="">Midea</a></li>
+              <li class="item"><a class="wfont" href="#">My Dashboard</a></li>
+              <li class="item"><a class="wfont" href="#">Sales Data</a></li> 
+              <li class="item"><a class="wfont" href="#">Analysis</a></li> 
+              <li class="item"><a class="wfont" href="#">Products</a></li> 
+              <li class="item"><a class="wfont" href="#">Admin</a></li>
+              <li>
+                <form class="navform">
+                    <input type="text" placeholder="Search">
+                  <button class="lmargin" type="submit">Search</button>
+                </form>
+              </li>
+              <li class="item">
+                <a class="wfont adjust" style="cursor:pointer">User Triste</a>
+                <ul class="shadow">
+                  <li><a class="blfont" href="#">Profile</a></li>
+                  <li><a class="blfont" href="#">Setting</a></li>
+                  <hr>
+                  <li><a class="blfont" href="#">Logout</a></li>
+                </ul>
+              </li>
+            </div>
+          </ul>
+      </nav>
+  <body >
+    <div style="margin-top:50px;">
+      <%= yield %>
+    </div>
+  <br>
+    
+  </body>
+
+</html>
+
+
+
+
+

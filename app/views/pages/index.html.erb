@@ -1,0 +1,23 @@
+<html>
+<body>
+    <div id="login">
+      <div class="lpanel">
+        <div class="panel">
+          <img src="" alt="">
+          <h4>WELCOME TO ASARS!</h4>
+          <center>
+          	<% if user_signed_in? %>
+  			<p><strong>Email</strong>: <%=current_user.email%></p>
+
+  			<p><%= link_to "Logout", destroy_user_session_path, :method => :delete %></p>
+			<% else %>
+  			<p><%= link_to "Login", new_user_session_path %></p>
+  			<% end %>
+          <h5><%= link_to "Home", root_path %> <%= link_to "Logout", destroy_user_session_path, :method => :delete %></p></h5>
+          </center>
+        </div>
+      </div>
+      <footer>Copyright 2015 Conception Midea Inc. Powered by Triste. All Rights Reserved.</footer>
+    </div>
+  </body>
+  </html>

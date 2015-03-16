@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset="utf-8">
+      <!-- css link -->
+      <link href="css/style.css" rel="stylesheet" type="text/css">
+
+      <!--font link-->
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+
+      <title>Concepcion Midea: Sell Out Tracker</title>
+  </head>
+  <body>
+    <div id="login">
+      <div class="lpanel">
+        <div class="panel">
+          <img src="" alt="">
+          <center><h4>Change your password</h4></center>
+          <center><form>
+            <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+              <%= devise_error_messages! %>
+              <%= f.hidden_field :reset_password_token %>
+
+              <div class="field">
+                <%= f.label :password, "New password" %><br />
+                <%= f.password_field :password, autofocus: true, autocomplete: "off" %>
+              </div>
+
+              <div class="field">
+                <%= f.label :password_confirmation, "Confirm new password" %><br />
+                <%= f.password_field :password_confirmation, autocomplete: "off" %>
+              </div>
+
+              <div class="actions">
+                <%= f.submit "Change my password" %>
+              </div>
+            <% end %>
+          </form></center>
+          <center>
+          <h5><%= render "devise/shared/links" %></h5>
+          </center>
+        </div>
+      </div>
+      <footer>Copyright 2015 Conception Midea Inc. Powered by Triste. All Rights Reserved.</footer>
+    </div>
+  </body>
+</html> 
