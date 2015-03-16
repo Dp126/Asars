@@ -1,1 +1,11 @@
-# Asars
+# Triste
+
+Kaya natin to!
+PUSO
+TIWALA
+DUGO
+PAWIS
+COURAGE
+AMDG +
+
+IT'S ALMOST OVER
