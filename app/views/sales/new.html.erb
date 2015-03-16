@@ -11,6 +11,7 @@
   <%= f.input :request_for_installation %>
   <%= f.input :invoice_amount %>
   <%= f.input :incentive %>
+  <%= f.association :product %>
   <hr>
   <%= f.submit "Create Sales" %>
 <% end %>

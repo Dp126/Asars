@@ -41,30 +41,20 @@
         <thead>
           <!--table headers-->
           <tr>
-            <th class="wfont">Date</th>
-            <th class="wfont">Serial Number</th>
-            <th class="wfont">Category</th>
-            <th class="wfont">Price</th>
-            <th class="wfont">Quantity</th>
-            <th class="wfont">Payment</th>
-            <th class="wfont">Status</th>
             <th class="wfont">SKU</th>
+            <th class="wfont">Name</th>
+            <th class="wfont">Description</th>
           </tr>
         </thead>
         <tbody>
-          <% @sales.each do |sale| %>
+          <% @products.each do |product| %>
           <tr>
             <!--replace contents with ruby variables-->
-            <td><%= sale.date_of_purchase %></td>
-            <td><%= sale.serial_number %></td>
-            <td><%= sale.invoice_number %></td>
-            <td class="rightalign"><%= sale.invoice_amount %></td>
-            <td><%= sale.incentive %></td>
-            <td><%= sale.mode_of_payment %></td>
-            <td><%= sale.request_for_installation %></td>
-            <td><%= sale.product.SKU %></td>         
+            <td><%= product.SKU %></td>
+            <td><%= product.name %></td>
+            <td><%= product.description %></td>
+            <%= link_to "Destroy", product_path(product.id), :method => :delete, :data => { :confirm => "Are you sure?" } %>
             <% end %>
-
           </tr>
         </tbody>
       </table>
