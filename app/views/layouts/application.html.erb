@@ -2,33 +2,34 @@
 <html lang='en'>
 <head>
     <meta charset="utf-8">
-      <!-- css link -->
-      <link href="css/style.css" rel="stylesheet" type="text/css">
+    <!-- css link -->
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 
-      <!-- font link -->
-      <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    <!-- font link -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
 
-      <!-- Js Script -->
-      <script type="text/javascript" src="js/sorttable.js"></script>
-      <!--dependencies for table pagination-->
-      <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <!-- Js Script -->
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <script type="text/javascript" src="js/sorttable.js"></script>
+
+    <!--dependencies for table pagination-->
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="js/tablepagination.js"></script>
+
     <!--script for table pagination-->
-      <script type="text/javaScript"> 
+    <script type="text/javaScript"> 
       $(function() {
         $('table').tablePagination({});
       });
     </script>
 
-      <title>Concepcion Midea: Sell Out Tracker</title>
-      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-      <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-      <%= csrf_meta_tags %>
+    <title>Concepcion Midea: Sell Out Tracker</title>
+    
   </head>
   <nav class="navbar">
-          <ul style="margin: 0 auto">
-            <div class="test">
+          <ul>
+            <div>
               <li><a class="navtitle" href="">Midea</a></li>
               <li class="item"><a class="wfont" href="#">My Dashboard</a></li>
               <li class="item"><a class="wfont" href="#">Sales Data</a></li> 
@@ -54,7 +55,7 @@
           </ul>
       </nav>
   <body >
-    <div style="margin-top:50px;">
+    <div style="margin-top:56px;">
       <%= yield %>
     </div>
   <br>
