@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   resources :dealers
   resources :dealer_stores
   resources :agencies
+  resources :charts
 end
