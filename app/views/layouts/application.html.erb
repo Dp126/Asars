@@ -10,8 +10,10 @@
 
     <!-- Js Script -->
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    <!--chartkick graph design-->
+    <!--chartkick graph design: google charts-->
     <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
+    <!--chartkick graph design: highchart-->
+    <%#= javascript_include_tag "js/highcharts.js", "chartkick" %>
     <!--js for sorting column content-->
     <script type="text/javascript" src="js/sorttable.js"></script>
 
