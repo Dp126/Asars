@@ -28,40 +28,41 @@
     
   </head>
   <nav class="navbar">
-          <ul>
-            <div>
-              <li><a class="navtitle" href="">Midea</a></li>
-              <li class="item"><a class="wfont" href="#">My Dashboard</a></li>
-              <li class="item"><a class="wfont" href="#">Sales Data</a></li> 
-              <li class="item"><a class="wfont" href="#">Analysis</a></li> 
-              <li class="item"><a class="wfont" href="#">Products</a></li> 
-              <li class="item"><a class="wfont" href="#">Admin</a></li>
-              <li>
-                <form class="navform">
-                    <input type="text" placeholder="Search">
-                  <button class="lmargin" type="submit">Search</button>
-                </form>
-              </li>
-              <li class="item">
-                <a class="wfont adjust" style="cursor:pointer">User Triste</a>
-                <ul class="shadow">
-                  <li><a class="blfont" href="#">Profile</a></li>
-                  <li><a class="blfont" href="#">Setting</a></li>
-                  <hr>
-                  <li><a class="blfont" href="#">Logout</a></li>
-                </ul>
-              </li>
-            </div>
+    <ul>
+      <div>
+        <!--link the nav items also fix the :active-->
+        <li><a class="navtitle" href="">Midea</a></li>
+        <li class="item"><a class="wfont" href="#">My Dashboard</a></li>
+        <li class="item"><a class="wfont" href="#">Sales Data</a></li> 
+        <li class="item"><a class="wfont" href="#">Analysis</a></li> 
+        <li class="item"><a class="wfont" href="#">Products</a></li> 
+        <li class="item"><a class="wfont" href="#">Admin</a></li>
+        <!--nav search-->
+        <li>
+          <form class="navform">
+            <input type="text" placeholder="Search">
+            <button class="lmargin" type="submit">Search</button>
+          </form>
+        </li>
+        <!--user find a way to change the name to whoever the user is-->
+        <li class="item">
+          <a class="wfont adjust" style="cursor:pointer">User Triste</a>
+          <!--dropdown menu-->
+          <ul class="shadow">
+            <li><a class="blfont" href="#">Profile</a></li>
+            <li><a class="blfont" href="#">Setting</a></li>
+            <hr>
+            <li><a class="blfont" href="#">Logout</a></li>
           </ul>
-      </nav>
-  <body >
+        </li>
+      </div>
+    </ul>
+</nav>
+  <body>
     <div style="margin-top:56px;">
       <%= yield %>
     </div>
-  <br>
-    
   </body>
-
 </html>
 
 

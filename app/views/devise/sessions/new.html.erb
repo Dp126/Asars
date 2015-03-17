@@ -23,7 +23,6 @@
             </div>
           <% end %>
 
-<<<<<<< HEAD
           <div class="actions">
               <%= f.submit "Log in" %>
           </div>
@@ -31,33 +30,6 @@
       </form>
       <!--login/forgot password links-->
       <h5><%= render "devise/shared/links" %></h5>
-=======
-              <div class="field">
-                <%= f.label :password %><br />
-                <%= f.password_field :password, autocomplete: "off" %>
-              </div>
-
-              <% if devise_mapping.rememberable? -%>
-                <div class="field">
-                  <%= f.check_box :remember_me %>
-                  <%= f.label :remember_me %>
-              </div>
-              <% end -%>
-
-              <div class="actions">
-                  <%= f.submit "Log in" %>
-              </div>
-            <% end %>
-          </form>
-          <center>
-          <h5><%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-              <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
-            <% end -%></h5>
-          </center>
-        </div>
-      </div>
-      <footer>Copyright 2015 Conception Midea Inc. Powered by Triste. All Rights Reserved.</footer>
->>>>>>> 6c0fa5841bc356c522649e4ff9656fbda405a10b
     </div>
   </div>
   <!--change copyright to c accent e in triste-->
