@@ -1,51 +1,37 @@
-<!DOCTYPE html>
-<html lang='en'>
-  <head>
-    <meta charset="utf-8">
-      <!-- css link -->
-      <link href="css/style.css" rel="stylesheet" type="text/css">
+<div id="login">
+  <div class="lpanel">
+    <div class="panel">
+      <!--put midea logo-->
+      <img src="" alt="">
+      <h4>ADMIN</h4>
+      <form>
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <!--please clarify what the class field is for-->
+          <div class="field">
+            <%= f.email_field :email, autofocus: true, :placeholder => "Email", :required => true %> 
+          </div>
 
-      <!--font link-->
-      <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+          <div class="field">
+            <%= f.password_field :password, autocomplete: "off", :placeholder => "Password", :required => true %>
+          </div>
 
-      <title>Concepcion Midea: Sell Out Tracker</title>
-  </head>
-  <body>
-    <div id="login">
-      <div class="lpanel">
-        <div class="panel">
-          <img src="" alt="">
-          <h4>ADMIN</h4>
-          <form>
-            <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-              <div class="field">
-                <%= f.label :email %><br />
-                <%= f.email_field :email, autofocus: true %>
-              </div>
+          <% if devise_mapping.rememberable? %>
+            <div>
+              <!--please move to the left-->
+              <%= f.check_box :remember_me %>
+              <%= f.label :remember_me %>
+            </div>
+          <% end %>
 
-              <div class="field">
-                <%= f.label :password %><br />
-                <%= f.password_field :password, autocomplete: "off" %>
-              </div>
-
-              <% if devise_mapping.rememberable? -%>
-                <div class="field">
-                  <%= f.check_box :remember_me %>
-                  <%= f.label :remember_me %>
-              </div>
-              <% end -%>
-
-              <div class="actions">
-                  <%= f.submit "Log in" %>
-              </div>
-            <% end %>
-          </form>
-          <center>
-          <h5><%= render "devise/shared/links" %></h5>
-          </center>
-        </div>
-      </div>
-      <footer>Copyright 2015 Conception Midea Inc. Powered by Triste. All Rights Reserved.</footer>
+          <div class="actions">
+              <%= f.submit "Log in" %>
+          </div>
+        <% end %>
+      </form>
+      <!--login/forgot password links-->
+      <h5><%= render "devise/shared/links" %></h5>
     </div>
-  </body>
-</html> 
+  </div>
+  <!--change copyright to c accent e in triste-->
+  <footer>Copyright 2015 Conception Midea Inc. Powered by Triste. All Rights Reserved.</footer>
+</div>
