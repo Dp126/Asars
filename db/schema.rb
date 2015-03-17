@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150316092424) do
+ActiveRecord::Schema.define(version: 20150317132010) do
 
   create_table "agencies", force: :cascade do |t|
     t.string   "agency_name"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20150316092424) do
     t.text     "adress"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "dealer_id"
   end
 
   create_table "dealers", force: :cascade do |t|
@@ -38,15 +39,19 @@ ActiveRecord::Schema.define(version: 20150316092424) do
   create_table "employees", force: :cascade do |t|
     t.string   "employee_name"
     t.string   "cellphone_no"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.integer  "agency_id"
+    t.integer  "dealer_store_id"
   end
 
   create_table "product_prices", force: :cascade do |t|
     t.decimal  "price"
     t.date     "effective_date"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.integer  "dealer_store_id"
+    t.integer  "product_id"
   end
 
   create_table "products", force: :cascade do |t|
@@ -69,6 +74,8 @@ ActiveRecord::Schema.define(version: 20150316092424) do
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
     t.integer  "product_id"
+    t.integer  "dealer_store_id"
+    t.integer  "employee_id"
   end
 
   create_table "users", force: :cascade do |t|

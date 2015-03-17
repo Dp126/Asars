@@ -22,12 +22,36 @@
             <%= f.password_field :password_confirmation, autocomplete: "off", :placeholder => "Confirm Password", :required => true %>
           </div>
 
+<<<<<<< HEAD
           <div class="actions">
             <%= f.submit "Sign up" %>
           </div>
         <% end %>
       </form>
       <h5><%= render "devise/shared/links" %></h5>
+=======
+              <div class="field">
+                <%= f.label :password %>
+                <% if @validatable %>
+                <em>(<%= @minimum_password_length %> characters minimum)</em>
+                <% end %><br />
+                <%= f.password_field :password, autocomplete: "off" %>
+              </div>
+
+              <div class="field">
+                <%= f.label :password_confirmation %><br />
+                <%= f.password_field :password_confirmation, autocomplete: "off" %>
+              </div>
+
+            <% end %>
+          </form>
+          <center>
+          <h5><%= render "devise/shared/links" %></h5>
+          </center>
+        </div>
+      </div>
+      <footer>Copyright 2015 Conception Midea Inc. Powered by Triste. All Rights Reserved.</footer>
+>>>>>>> 6c0fa5841bc356c522649e4ff9656fbda405a10b
     </div>
   </div>
   <footer>Copyright 2015 Conception Midea Inc. Powered by Triste. All Rights Reserved.</footer>
